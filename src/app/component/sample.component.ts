@@ -22,6 +22,8 @@ export class SampleComponent implements OnInit {
         this.sampleComponentData$.subscribe((sampleComponentData: SampleComponentData) => {
             this.sampleComponentData = sampleComponentData;
         });
+
+        this.ngRedux.dispatch(this.sampleComponentActions.loadRows());
     }
 
     addSampleRow(name: string, description: string) {

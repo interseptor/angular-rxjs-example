@@ -8,7 +8,6 @@ import { SampleComponentActions } from "./sample.action";
     imports: [
         CommonModule
     ],
-    providers: [SampleComponentActions],
     exports: [SampleComponent]
 })
 export class SampleModule {

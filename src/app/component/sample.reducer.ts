@@ -1,5 +1,5 @@
 import { SampleComponentData, SampleComponentState } from "./sample.data";
-import { AddSampleRowAction, RemoveSampleRowAction, SampleComponentAction, SampleComponentActions } from "./sample.action";
+import { AddSampleRowAction, RemoveSampleRowAction, SampleComponentAction, SampleComponentActions, SetLoadedRowsAction } from "./sample.action";
 
 const INITIAL_STATE: SampleComponentState = {sampleComponentData: new SampleComponentData([])};
 
@@ -14,6 +14,10 @@ export function sampleComponentReducer(state: SampleComponentState = INITIAL_STA
                     state.sampleComponentData.sampleRows.filter(row => row !== (<RemoveSampleRowAction>action).sampleRow)
                 )
             };
+        case SampleComponentActions.SET_LOADED_ROWS:
+            return {
+                sampleComponentData: new SampleComponentData((<SetLoadedRowsAction>action).sampleRows)
+            }
     }
     return state;
 }
