@@ -1,0 +1,25 @@
+.toolbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.toolbar input {
+    padding-right: 10px;
+}
+
+.sampleRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.sampleRow span {
+    padding-right: 10px;
+}
+
+.addButton {
+    background-color: chartreuse;
+}
+
+.removeButton {
+    background-color: lightcoral;
+}

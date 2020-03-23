@@ -1,0 +1,14 @@
+<div class="toolbar">
+    <span>Name: </span>
+    <input #nameInput type="text"/>
+    <span>Description: </span>
+    <input #descriptionInput type="description">
+    <div class="addButton" (click)="addSampleRow(nameInput.value, descriptionInput.value)">Add sample row</div>
+</div>
+<div>
+    <div *ngFor="let sampleRow of sampleComponentData.sampleRows" class="sampleRow">
+        <span>{{sampleRow.name}}</span>
+        <span>{{sampleRow.description}}</span>
+        <div class="removeButton" (click)="removeSampleRow(sampleRow)">Remove sample row</div>
+    </div>
+</div>
